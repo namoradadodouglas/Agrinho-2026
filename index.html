@@ -3,18 +3,295 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Milho</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Cultivando o Futuro com Responsabilidade</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body{
+            background:#f5f7f2;
+            color:#333;
+            line-height:1.6;
+        }
+
+        header{
+            background:linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+            url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1600&q=80');
+            background-size:cover;
+            background-position:center;
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            color:white;
+        }
+
+        .hero{
+            max-width:800px;
+            padding:20px;
+        }
+
+        .hero h1{
+            font-size:4rem;
+            margin-bottom:20px;
+        }
+
+        .hero p{
+            font-size:1.3rem;
+            margin-bottom:30px;
+        }
+
+        .btn{
+            background:#4CAF50;
+            color:white;
+            padding:15px 35px;
+            text-decoration:none;
+            border-radius:50px;
+            transition:.3s;
+            font-weight:bold;
+        }
+
+        .btn:hover{
+            background:#2E7D32;
+        }
+
+        section{
+            padding:80px 10%;
+        }
+
+        .titulo{
+            text-align:center;
+            margin-bottom:50px;
+            color:#2E7D32;
+            font-size:2.5rem;
+        }
+
+        .cards{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:25px;
+        }
+
+        .card{
+            background:white;
+            padding:30px;
+            border-radius:15px;
+            box-shadow:0 5px 20px rgba(0,0,0,.08);
+            transition:.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-8px);
+        }
+
+        .card h3{
+            color:#2E7D32;
+            margin-bottom:15px;
+        }
+
+        .impacto{
+            background:#2E7D32;
+            color:white;
+            text-align:center;
+        }
+
+        .contador{
+            font-size:4rem;
+            font-weight:bold;
+            margin:20px 0;
+        }
+
+        footer{
+            background:#1b1b1b;
+            color:white;
+            text-align:center;
+            padding:30px;
+        }
+
+        nav{
+            position:fixed;
+            width:100%;
+            top:0;
+            left:0;
+            padding:20px 10%;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            z-index:1000;
+            transition:.3s;
+        }
+
+        nav.scrolled{
+            background:white;
+            box-shadow:0 2px 10px rgba(0,0,0,.1);
+        }
+
+        nav.scrolled .logo,
+        nav.scrolled a{
+            color:#2E7D32;
+        }
+
+        .logo{
+            color:white;
+            font-size:1.4rem;
+            font-weight:bold;
+        }
+
+        .menu a{
+            color:white;
+            text-decoration:none;
+            margin-left:20px;
+            font-weight:500;
+        }
+
+        @media(max-width:768px){
+
+            .hero h1{
+                font-size:2.5rem;
+            }
+
+            .hero p{
+                font-size:1rem;
+            }
+
+            .menu{
+                display:none;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<div class="milho">
-    <div class="espiga" id="espiga"></div>
+<nav id="navbar">
+    <div class="logo">🌱 Agro Sustentável</div>
 
-    <div class="folha folha-esquerda"></div>
-    <div class="folha folha-direita"></div>
-</div>
+    <div class="menu">
+        <a href="#sobre">Sobre</a>
+        <a href="#praticas">Práticas</a>
+        <a href="#impacto">Impacto</a>
+    </div>
+</nav>
 
-<script src="script.js"></script>
+<header>
+    <div class="hero">
+        <h1>Cultivando o Futuro com Responsabilidade</h1>
+
+        <p>
+            Produzir alimentos, preservar recursos naturais e construir um
+            futuro sustentável para as próximas gerações.
+        </p>
+
+        <a href="#sobre" class="btn">Saiba Mais</a>
+    </div>
+</header>
+
+<section id="sobre">
+    <h2 class="titulo">Nosso Compromisso</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>🌾 Produção Responsável</h3>
+            <p>
+                Aumentar a produtividade agrícola utilizando práticas
+                sustentáveis e eficientes.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>💧 Preservação da Água</h3>
+            <p>
+                Gestão inteligente dos recursos hídricos para garantir
+                disponibilidade futura.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🌳 Conservação Ambiental</h3>
+            <p>
+                Proteção da biodiversidade e recuperação de áreas naturais.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="praticas">
+    <h2 class="titulo">Práticas Sustentáveis</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>🚜 Agricultura de Precisão</h3>
+            <p>
+                Uso de tecnologia para otimizar recursos e reduzir desperdícios.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>☀️ Energia Renovável</h3>
+            <p>
+                Aproveitamento de energia solar e fontes limpas no campo.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🌱 Recuperação do Solo</h3>
+            <p>
+                Técnicas que melhoram a fertilidade e a conservação do solo.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="impacto" id="impacto">
+    <h2>Impacto Positivo</h2>
+
+    <div class="contador" id="contador">0</div>
+
+    <p>Árvores preservadas através de práticas sustentáveis.</p>
+</section>
+
+<footer>
+    <p>
+        © 2026 Cultivando o Futuro com Responsabilidade
+        | Agro Forte • Futuro Sustentável
+    </p>
+</footer>
+
+<script>
+
+    const navbar = document.getElementById("navbar");
+
+    window.addEventListener("scroll", () => {
+        if(window.scrollY > 50){
+            navbar.classList.add("scrolled");
+        } else {
+            navbar.classList.remove("scrolled");
+        }
+    });
+
+    const contador = document.getElementById("contador");
+    let valor = 0;
+    const alvo = 50000;
+
+    const animar = setInterval(() => {
+        valor += 500;
+
+        contador.textContent =
+            valor.toLocaleString('pt-BR');
+
+        if(valor >= alvo){
+            contador.textContent =
+                alvo.toLocaleString('pt-BR');
+            clearInterval(animar);
+        }
+    }, 30);
+
+</script>
+
 </body>
 </html>
